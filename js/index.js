@@ -218,7 +218,7 @@ window.onload = function() {
     }
 
     ///QUESTION (WHATS YOUR ZIP CODE???)
-    if (window.location.pathname.endsWith('Index3(zipcode).html')){
+    if (window.location.pathname.endsWith('/')){
     document.getElementById('submitZipCode').addEventListener('click', function() {
         // Get the value from the input field
         let zipCode = document.getElementById('zipCode').value;
@@ -244,7 +244,7 @@ window.onload = function() {
 
 
     /// SECOND QUESTION ( DO YOU WANT TO EAT MEAT?)
-    if (window.location.pathname.endsWith('Index2.html')) {
+    if (window.location.pathname.endsWith('/')) {
         document.getElementById('noEattingAnimals').addEventListener('click', function() {
             Vegetarian = true;
             localStorage.setItem('Vegetarian', 'true');  // Save the state
@@ -268,7 +268,7 @@ window.onload = function() {
 
 
     //RESTARNT LIST
-    if (window.location.pathname.endsWith('Index4(resturants).html')) {
+    if (window.location.pathname.endsWith('/')) {
         displayRandomRestaurant();
 
         document.getElementById('yes').addEventListener('click', function() {
