@@ -190,7 +190,7 @@ function openDirections(restaurant) {
 // Set up the initial link and update on page load & load new pages -- question updates
 window.onload = function() {
     console.log( window.location.pathname)
-    if (window.location.pathname.endsWith('Index5.html')) {
+    if (window.location.pathname.endsWith('/Index5')) {
         pickFromList();
         const recipeElement = document.getElementById('no');
         recipeElement.addEventListener('click', pickFromList);
@@ -218,7 +218,7 @@ window.onload = function() {
     }
 
     ///QUESTION (WHATS YOUR ZIP CODE???)
-    if (window.location.pathname.endsWith('/')){
+    if (window.location.pathname.endsWith('/index3(zipcode)')){
     document.getElementById('submitZipCode').addEventListener('click', function() {
         // Get the value from the input field
         let zipCode = document.getElementById('zipCode').value;
@@ -244,7 +244,7 @@ window.onload = function() {
 
 
     /// SECOND QUESTION ( DO YOU WANT TO EAT MEAT?)
-    if (window.location.pathname.endsWith('/')) {
+    if (window.location.pathname.endsWith('/index2')) {
         document.getElementById('noEattingAnimals').addEventListener('click', function() {
             Vegetarian = true;
             localStorage.setItem('Vegetarian', 'true');  // Save the state
@@ -268,7 +268,7 @@ window.onload = function() {
 
 
     //RESTARNT LIST
-    if (window.location.pathname.endsWith('/')) {
+    if (window.location.pathname.endsWith('/index4(resturants)')) {
         displayRandomRestaurant();
 
         document.getElementById('yes').addEventListener('click', function() {
