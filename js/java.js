@@ -197,7 +197,7 @@ window.onload = function() {
 
 
     /// FIRST QUESTION ( DO YOU WANT TO EAT OUT?)
-    if (window.location.pathname.endsWith('Index1.html')) {
+    if (window.location.pathname.endsWith('Index.html')) {
         document.getElementById('noEattingOut').addEventListener('click', function() {
             document.getElementById('Question').textContent = "OK, Probably for the best....Give me a sec...";
             document.getElementById("loadingupdater").innerHTML = '<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>'
