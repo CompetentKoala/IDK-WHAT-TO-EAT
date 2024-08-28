@@ -189,7 +189,7 @@ function openDirections(restaurant) {
 
 // Set up the initial link and update on page load & load new pages -- question updates
 window.onload = function() {
-    console.log( window.location.href )
+    console.log( window.location.pathname)
     if (window.location.pathname.endsWith('Index5.html')) {
         pickFromList();
         const recipeElement = document.getElementById('no');
