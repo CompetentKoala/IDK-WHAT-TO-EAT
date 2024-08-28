@@ -2,7 +2,7 @@ body {
   font-family: Montserrat;
   display: flex;
   flex-direction: column;
-  color: rgba(0, 217, 255, 0.893);
+  color: rgba(255, 255, 255, 0.893);
   background-color: black;
   height: 100vh;
   margin: 0; /* Remove default body margin */
@@ -98,7 +98,7 @@ button:hover + input {
   text-align: center;
   margin-top: 1%;
   font-size: 2rem;
-  color: rgb(205, 205, 205);
+  color: rgba(0, 217, 255, 0.386);
 }
 
 .howAbout {
