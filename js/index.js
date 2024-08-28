@@ -189,6 +189,7 @@ function openDirections(restaurant) {
 
 // Set up the initial link and update on page load & load new pages -- question updates
 window.onload = function() {
+    console.log( window.location.href )
     if (window.location.pathname.endsWith('Index5.html')) {
         pickFromList();
         const recipeElement = document.getElementById('no');
@@ -197,7 +198,7 @@ window.onload = function() {
 
 
     /// FIRST QUESTION ( DO YOU WANT TO EAT OUT?)
-    if (window.location.pathname.endsWith('Index.html')) {
+    if (window.location.pathname.endsWith('netlify.app')) {
         document.getElementById('noEattingOut').addEventListener('click', function() {
             document.getElementById('Question').textContent = "OK, Probably for the best....Give me a sec...";
             document.getElementById("loadingupdater").innerHTML = '<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>'
