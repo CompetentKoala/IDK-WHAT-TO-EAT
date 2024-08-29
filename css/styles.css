@@ -1,94 +1,226 @@
-body{
+/* Base styles */
+body {
     font-family: Montserrat;
     display: flex;
     flex-direction: column;
     color: #ffffff;
     background-color: black;
     height: 100vh;
+    margin: 0; /* Remove default margin */
+  }
 
-
-
-}
-.answers,.zipCode{
+  main{
     display: flex;
-    width: 100%;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+
+  }
+
+  .titlemain{
+    justify-self: center;
+    text-align: center;
+  }
+
+  .answers, .zipCode {
+    display: flex;
+    width: 400px;
+    align-self: center;
     justify-content: center;
     justify-self: center;
-    margin-top: 0px;
+    margin-top: 0;
+  }
 
-}
-#yes, #no{
+  #yes, #no {
     padding: 20px;
-}
-.yes, .no, .zipCode{
-border: solid 3px;
-border-radius: 15px;
-padding: 20px;
-flex: 1;
-text-align: center;
-justify-self: center;
-background-color: rgba(0, 217, 255, 0.386);
-transition: .5s;
-height: 80px;
-color: white;
+  }
 
-display: flex;          /* Enables Flexbox on the element */
-    justify-content: center; /* Centers content horizontally */
-    align-items: center;    /* Centers content vertically */
-}
-.yes:active, .no:active, .yes:hover, .no:hover{
-    background-color:rgba(1, 150, 177, 0.918);
+  /* Ensure both boxes have the same styles */
+  .yes, .no {
+    font-size: 1rem;
+    border: solid 3px;
+    border-radius: 15px;
+    padding: 20px;
+    flex: 1;
+    text-align: center;
+    background-color: rgba(0, 217, 255, 0.386);
+    transition: .5s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  /* Styles for hover and active states */
+  .yes:active, .no:active, .yes:hover, .no:hover {
+    background-color: rgba(1, 150, 177, 0.918);
+  }
+h2{
+    margin: 100;
 }
 
-.no:visited{
-    background-color:rgba(47, 255, 16, 0.918);
+#welcome{
+    margin-top: 30%;
 }
+  .no:visited {
+    background-color: rgba(47, 255, 16, 0.918);
+  }
 
-.links{
+  .links {
     text-align: center;
     margin-top: 1%;
     font-size: 2rem;
-    color: rgb(255, 255, 255);
+    color: rgb(0, 217, 255);
+    margin: 10px;
+  }
 
-}
-.howAbout{
+  .howAbout {
     text-align: center;
-    margin-top:60px;
+    margin-top: 60px;
     margin-bottom: 60px;
-}
 
-a{
+  }
+
+  a {
     color: white;
     text-decoration: none;
-}
-a:hover{
-    cursor: pointer;
-}
+  }
+#recipeName{
+    color:rgb(0, 217, 255);
 
-.yes:hover, .no:hover{
+  }
+
+  a:hover {
+    cursor: pointer;
+  }
+
+  .yes:hover, .no:hover {
     transform: scale(1.2);
     cursor: pointer;
+  }
 
-
+  .yes a, .no a {
+    width: 100%;          /* Make the anchor fill the box horizontally */
+    height: 100%;         /* Make the anchor fill the box vertically */
+    display: flex;        /* Enable Flexbox on the anchor itself */
+    justify-content: center; /* Center the text horizontally */
+    align-items: center;  /* Center the text vertically */
+  }
+  #recipeDisplay {
+    opacity: 0; /* Ensure the image starts off as invisible */
+    align-self: center;
+    animation: fadeIn 1s forwards; /* Trigger the fade-in animation */
+}
+@keyframes fadeIn {
+  from {
+      opacity: 0;
+  }
+  to {
+      opacity: 1;
+  }
 }
 
-.title{
+@keyframes fadeOut {
+  from {
+      opacity: 1;
+  }
+  to {
+      opacity: 0;
+  }
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+.fade-in {
+  animation: fadeIn 1s forwards;
+}
+
+img{
+  height: 20vh;
+  align-self: center;
+  justify-self: center;
+  box-shadow: rgb(0, 208, 255) 0px 00px 50px;
+  border-radius: 30px;
+  border: 4px solid;
+  animation: fadeIn 2s forwards;
+}
+
+
+  .title {
     text-align: center;
     padding: 20px;
+  }
 
-    align-self: flex-start;
-
-}
-.titlemain{
-    align-self: flex-start;
-}
-
-footer{
+  footer {
     font-size: 10px;
     align-self: center;
     position: absolute;  /* Positions the footer relative to the viewport */
-    bottom: 0;        /* Aligns the footer to the bottom of the screen */         /* Aligns the footer to the right of the screen */
-    padding: 2px;    /* Optional padding */
-
+    bottom: 0;           /* Aligns the footer to the bottom of the screen */
+    padding: 2px;       /* Optional padding */
     border-radius: 5px;
-}
+  }
+
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .yes, .no {
+      height: 60px; /* Adjust height */
+      width: 120px; /* Adjust width */
+      font-size: 0.9rem; /* Adjust font size */
+      padding: 15px; /* Adjust padding */
+      margin: 0 5px;
+    }
+
+    .links {
+      font-size: 1.5rem; /* Adjust font size */
+    }
+
+    .howAbout {
+      margin-top: 10%; /* Adjust margin */
+    }
+
+    .title {
+      padding: 15px; /* Adjust padding */
+    }
+
+    footer {
+      font-size: 8px; /* Adjust font size */
+      padding: 5px; /* Adjust padding */
+    }
+
+    .lds-roller {
+      width: 60px; /* Adjust spinner size */
+      height: 60px; /* Adjust spinner size */
+    }
+  }
+
+  @media (max-width: 480px) {
+    .yes, .no {
+      height: 50px; /* Further adjust height */
+      width: 100px; /* Further adjust width */
+      font-size: 0.8rem; /* Further adjust font size */
+      padding: 20px; /* Further adjust padding */
+    }
+
+    .links {
+      font-size: 2rem; /* Further adjust font size */
+    }
+
+    .howAbout {
+      margin-top: 5%; /* Adjust margin */
+    }
+
+    .title {
+      padding: 10px; /* Further adjust padding */
+    }
+
+    footer {
+      font-size: 6px; /* Further adjust font size */
+      padding: 3px; /* Further adjust padding */
+    }
+
+    .lds-roller {
+      width: 50px; /* Further adjust spinner size */
+      height: 50px; /* Further adjust spinner size */
+    }
+  }

@@ -12,7 +12,10 @@ body{
 .small{
   font-size: .6rem;
 }
-
+h4{
+  color:rgb(0, 217, 255);
+  margin-top: 5%;
+}
 .answers,.zipcode-input{
     display: flex;
     width: 100%;
@@ -95,7 +98,7 @@ button:hover + input {
 
 .links{
     text-align: center;
-    margin-top: 1%;
+    margin-top: 8%;
     font-size: 2rem;
     color: rgb(237, 0, 0);
     text-shadow: -1px -1px 0 #ffffff, 1px -1px 0 #ffffff, -1px 1px 0 #ffffff, 1px 1px 0 #ffffff;
@@ -103,7 +106,7 @@ button:hover + input {
 }
 .howAbout{
     text-align: center;
-    margin-top:20%
+    margin-top:8%
 }
 
 a{
@@ -140,7 +143,7 @@ footer{
     position: absolute;  /* Positions the footer relative to the viewport */
     bottom: 0;        /* Aligns the footer to the bottom of the screen */         /* Aligns the footer to the right of the screen */
     padding: 2px;    /* Optional padding */
-
+    text-align: CENTER;
     border-radius: 5px;
 }
 
@@ -157,7 +160,7 @@ footer{
     position: fixed; /* Change to fixed to stay in place relative to viewport */
     top: 20%; /* Center vertically */
     left: 50%; /* Center horizontally */
-    transform: translate(-50%, -50%); /* Adjust to truly center */
+    transform: translate(-60%, -50%); /* Adjust to truly center */
     z-index: 9999; /* Ensure it is above other elements */
     width: 80px;
     height: 80px;
@@ -259,3 +262,55 @@ footer{
       transform: rotate(360deg);
     }
   }
+
+
+  @media (max-width: 768px) {
+    .yes, .no {
+      height: 60px; /* Reduce height */
+      width: 120px; /* Reduce width */
+      font-size: 0.9rem; /* Reduce font size */
+      padding: 15px; /* Reduce padding */
+    }
+
+    .links {
+      font-size: 1.5rem; /* Reduce font size */
+    }
+
+    .howAbout {
+      margin-top: 10%; /* Adjust margin */
+    }
+
+    .title {
+      padding: 15px; /* Reduce padding */
+    }
+
+
+  @media (max-width: 480px) {
+    .yes, .no {
+      height: 50px; /* Further reduce height */
+      width: 100px; /* Further reduce width */
+      font-size: 0.8rem; /* Further reduce font size */
+      padding: 10px; /* Further reduce padding */
+    }
+
+    .links {
+      font-size: 1rem; /* Further reduce font size */
+    }
+
+    .howAbout {
+      margin-top: 40%; /* Adjust margin */
+    }
+
+    .title {
+      padding: 10px; /* Further reduce padding */
+    }
+
+
+
+    .lds-roller {
+      width: 60px; /* Reduce spinner size */
+      height: 60px; /* Reduce spinner size */
+    }
+  }
+
+}
