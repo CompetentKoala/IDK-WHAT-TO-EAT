@@ -256,7 +256,7 @@ function openDirections(restaurant) {
 
 // Set up the initial link and update on page load & load new pages -- question updates
 window.onload = function() {
-    if (window.location.pathname.endsWith('Index5.html')) {
+    if (window.location.pathname.endsWith('index5')) {
         pickFromList();
 
         // Optional: Handle the "No" button click to choose another recipe
