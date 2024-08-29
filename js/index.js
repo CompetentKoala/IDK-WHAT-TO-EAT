@@ -251,7 +251,7 @@ window.onload = function() {
             document.getElementById("loadingupdater").innerHTML = '<div class="lds-roller"><div></div><div></div><div></div><div></div><div></div><div></div><div></div><div></div></div>'
             document.getElementById('Question').textContent = "Awesome, Let me pull up some of the best vegetarian recipes!";
             setTimeout(() => {
-                window.location.href = 'Index.html';
+                window.location.href = 'Index5.html';
             }, 2500);
         });
 
