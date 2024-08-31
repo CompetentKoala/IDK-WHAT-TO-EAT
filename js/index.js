@@ -253,6 +253,33 @@ function openDirections(restaurant) {
     window.open(url, '_blank');
 }
 
+//IF MOBILE DEVICE, open google or apple maps instead of browser links
+function isMobileDevice() {
+    return /Mobi|Android/i.test(navigator.userAgent);
+}
+
+function isSafariBrowser() {
+    return /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+}
+
+function openMaps(restaurantName) {
+    if (!isMobileDevice()) {
+        return; // Do nothing if it's not a mobile device
+    }
+
+    let mapsUrl = '';
+
+    if (isSafariBrowser()) {
+        // Open Apple Maps on Safari
+        mapsUrl = `http://maps.apple.com/?q=${encodeURIComponent(restaurantName)}`;
+    } else {
+        // Open Google Maps otherwise
+        mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(restaurantName)}`;
+    }
+
+    window.location.href = mapsUrl;
+}
+
 
 // Set up the initial link and update on page load & load new pages -- question updates
 window.onload = function() {
@@ -398,6 +425,7 @@ window.onload = function() {
 
                 console.log(restaurantName);
                 document.getElementById("lds-roller").innerHTML = '<h4 id="loadingupdater"></h4>';
+                openMaps(restaurantName);
                 window.open(`https://www.google.com/maps/search/${restaurantName} ${restaurantAddress}`, '_blank');
             }, 1000);
 
