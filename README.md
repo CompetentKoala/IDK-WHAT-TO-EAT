@@ -1,0 +1,1 @@
+The "IDK Food" project simplifies dinner decisions by using APIs to gather recipe and restaurant data. Users input preferences like dietary needs, which are processed to deliver personalized meal suggestions. This showcases my skills in API integration, user data management, and crafting interactive solutions.
